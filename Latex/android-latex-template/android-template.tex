@@ -1,0 +1,151 @@
+\documentclass[UTF8]{ctexart}
+
+\usepackage{geometry}
+\geometry{left = 3cm, right = 3cm, top = 2cm, bottom = 2cm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[section]{placeins}
+\usepackage{float}
+
+\title{中山大学数据科学与计算机学院本科生实验报告\\
+	\begin{large}
+	（2017年秋季学期）
+	\end{large}}
+
+\begin{document}
+%=======================================
+% 实验报告头
+%=======================================
+\maketitle
+\begin{center}
+	\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+        \begin{tabularx}{\textwidth}{X R}
+        	课程名称：手机应用平台开发& 任课老师：刘宁\\
+	\end{tabularx}
+	
+        \begin{tabularx}{\textwidth}{|X|X|X|X|}
+        	\hline
+        	年级& 大三& 专业（方向）& 计算机应用\\
+        	\hline
+        	学号& 15331386& 姓名& 詹宗沅\\
+        	\hline
+        	电话& 13128809301& Email& 1450303552@qq.com\\
+        	\hline
+        	开始日期& 20171107& 结束时间& 20171107\\
+        	\hline
+        \end{tabularx}
+\end{center}
+
+
+
+%=======================================
+% 实验题目
+%=======================================
+\section{实验题目}
+\paragraph{数据存储（二） }
+\begin{enumerate}
+\item 学习SQL数据库的使用
+\item 学习ContentProvider的使用
+\item 复习Android界面编程 
+\end{enumerate}
+
+
+%=======================================
+% 实验内容
+%=======================================
+\section{实验内容}
+%figure 一次只能插一个图片
+\begin{center}
+\includegraphics[width = .9\textwidth]{屏幕快照_2017-12-08_上午9.47.39.png}
+\includegraphics[width = .9\textwidth]{屏幕快照_2017-12-08_上午9.47.46.png}
+\includegraphics[width = .9\textwidth]{屏幕快照_2017-12-08_上午9.48.08.png}
+\end{center}
+
+
+%=======================================
+% 实验结果
+%=======================================
+\section{实验结果}
+	%=======================================
+	% 实验截图
+	%=======================================
+	\subsection{实验截图}
+	\begin{figure}[H]
+	\centering
+	\subfigure{
+		\begin{minipage}{.3\textwidth}
+		\includegraphics[width = \textwidth]{Screenshot_1512636581.png}
+		\end{minipage}
+	}
+	\subfigure{
+		\begin{minipage}{.3\textwidth}
+		\includegraphics[width = \textwidth]{Screenshot_1512636590.png}
+		\end{minipage}
+	}
+	\caption{主界面和生日信息添加界面，其中添加信息不能为空}
+	\end{figure}
+	
+	%=======================================
+	% 实验步骤及代码
+	%=======================================
+	\subsection{实验步骤及关键代码}
+		\paragraph{基本Recycerlist界面}
+		选择使用Recyclerlist创建基本界面，并且继承实现Recyclerlist.Adapter类，
+		和ViewHolder类，控制自动填充数据。同时创建每个重复单元的模板，
+		最终实现Recyclerlist重复渲染的效果。
+		\begin{figure}[H]
+		\centering
+			\begin{minipage}{.8\textwidth}
+			\includegraphics[width =  \textwidth]{下午4.50.25.png}\\
+			\includegraphics[width =  \textwidth]{下午4.51.07.png}\\
+			\includegraphics[width =  \textwidth]{下午4.51.19.png}
+			\end{minipage}
+		\end{figure}
+		\begin{figure}[H]
+		\centering
+			\begin{minipage}{.8\textwidth}
+			\includegraphics[width =  \textwidth]{下午5.03.06.png}
+			\end{minipage}
+		\end{figure}
+			
+	
+	%=======================================
+	% 实验遇到问题以及解决思路
+	%=======================================
+	\subsection{实验遇到的问题以及解决思路}
+	\begin{enumerate}
+		\item onActivityResult()无法获取从子Activity里面添加信息\\解决思路：将startActivity()改为startActivityForResult()
+		\item 在修改信息对话框中的内容难以获得\\解决思路：将点击具体哪一个位置的position信息传递给修改函数，
+		并将对话框对应的视图用一个View对象保存，以方便操作对话框中的元素和获取信息
+		\item 获取联系人号码时出现错误\\解决思路：
+		由于获取联系人的context.getContentResolver().query()语句中的selection参数中的"?"不能用具体的名字代替，
+		必须将名字放到后面的clause参数中，即query语句查询时应该使用"?"匹配相应查询条件
+	\end{enumerate}
+	
+	
+%=======================================
+% 实验思考及感想
+%=======================================
+\section{实验思考及感想}
+\begin{enumerate}
+        	\item 通过这次实验复习，更好掌握Recyclerlist的使用。过程包括对Adapter的配置，其中需要着重理解的是如何将点击函数用自定义接口传入，
+	这样可以实现更好的数据逻辑的分割，并且通过接口将数据和具体界面元素的绑定
+	\item 掌握SQLite数据查询的基本方法，使用cursor获取表中的游标，使用游标读取数据，使用相关insert，delete，update语句更新数据库
+	\item 学会设计对话框的layout和配置layout到对话框对象中，使用LayoutInflater创建View实例，并设置到AlertDialog中
+	\item 学会自己写接口类，使用接口类传递函数，在实现数据库查询的时候，我打算将一个自定的函数作为过滤器传入其中，
+	后来想到可以用类似定义点击函数的方法将函数作为接口的内部方法传入。对java中接口的实现和思想有了更深的体会
+	\item 稍微添加了自己对界面逻辑的想法，在添加和更改信息的时候自己加入了判断是否为空
+\end{enumerate}
+
+	
+	
+\paragraph{作业要求}
+\begin{enumerate}
+\item 命名要求：学号\_姓名\_实验编号，例如15330000\_林XX\_lab1。
+\item 实验报告提交格式为pdf。 
+\item 实验内容不允许抄袭，我们要进行代码相似度对比。如发现抄袭，按0分处理 
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,167 @@
+
+
+/* title style -----------------------------------------------------*/
+h1, h2{
+    background-color: rgb(240, 240, 240);
+    color: rgb(164,164,0);
+    font-family: Century Gothic;
+    text-decoration:underline;
+    letter-spacing:0.2em;
+}
+h1{
+    text-align:center;
+    font-size: 22pt;
+    font-weight: bold;
+}
+h2{
+    font-size: 18pt;
+    font-weight: normal;
+}
+.second_title{
+    background-color: rgb(200, 0, 0);
+    background-color: rgba(200,0,0,0.7);
+    height:45px;
+}
+.second_title h2{
+    color:white;
+    background-color:transparent;
+    font-size:25pt;
+}
+.title_text{
+    font-family:cursive;
+    font-size:10em;
+    color:white;
+    text-decoration:none;
+    position: absolute; 
+    background-color:transparent;
+    letter-spacing:normal;
+    top:-10%;
+    left:30%;
+    right:30%;
+}
+
+
+
+
+/* body text style ---------------------------------------------------------*/
+p, ul, ol, blockquote{
+    color:rgb(64,64,64);
+    font-size:11pt;
+    font-family:Georgia;
+}
+blockquote{
+    font-style: italic;
+    background-color:#FFFFC8;
+    width:1000px;
+}
+.maker{
+    text-align:right;
+    font-size: 8pt;
+    font-family: cursive;
+}
+
+
+
+
+/*  list style ------------------------------------------------------------*/
+ul li{
+    list-style-image:url("../image/pie_icon.gif");
+}
+
+
+/* link style*/
+a{
+    text-decoration:none;
+}
+.link{
+    font-size:11pt;
+    font-family:Georgia;
+    color:#A4A400;
+}
+
+
+
+
+/*  search block ------------------------------------------------------*/
+input{
+    position: relative;
+    top:55%;
+    padding:0;
+    margin-left:30%;
+    margin-right:30%;
+    width:40%;
+    height:30px;
+}
+
+
+
+
+/* image style--------------------------------------------------*/
+img{
+    border:0;
+}
+
+
+
+
+/* background -------------------------------------------------*/
+.pie_background{
+    background-image:url("../image/silverware.jpg");
+    background-attachment:fixed;
+    background-size:50%;
+}
+.first_title{
+	/*initial*/
+	margin:0;
+	padding:0;
+	border:0;
+    background-image:url("../image/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:500px;
+    width:100%;
+}
+.index_body{
+    background-image:url("../image/home_background.jpg");
+    background-position: 0px -100px;
+    background-attachment:fixed;
+    background-repeat:repeat;
+    background-size:cover;
+}
+
+
+
+
+/*table style-----------------------------------------------------------------*/
+table{
+    /*table-layout:fixed;*/
+    border-spacing:auto 1px;
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
+}
+table th,td{
+    width:25%;
+    text-align:center;
+}
+table th{
+    height:170px;
+}
+.table_image{
+    border:2px solid white;
+    width:150px;
+    height:150px;
+    border-radius:50%; 
+    overflow:hidden;
+}
+table a:hover{
+    color:rgb(200, 0, 0);
+    text-decoration:underline;
+}
+table a>img:hover{
+    width:160px;
+    height:160px;
+}
+.home_text{
+    color:white;
+}

@@ -1,0 +1,200 @@
+/*--------------------initial--------------------*/
+*{
+    margin:0px;
+    border:0px;
+    padding:0px;
+    
+    outline:none; /*#*/
+}
+
+
+
+/*--------------------text style--------------------*/
+h1, p{
+    font-family:Century Gothic;
+    text-align:center;
+    width:100%;
+    margin:10px auto;
+}
+h1{
+    font-weight:normal;
+}
+p{
+    font-size:18pt;
+}
+#output{
+    opacity:0;
+    transition:opacity 0.5s ease;
+}
+pre{
+    width:710px;
+    height:150px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family:Century Gothic;
+    font-size:12pt;
+}
+pre div{
+    width:101px;
+    height:26px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#EEEEEE;
+    border:1.5px solid black;
+}
+
+
+
+/*--------------------maze block--------------------*/
+#outline{
+    cursor:pointer; /*#*/
+    width:500px;
+    height:300px;
+    margin:20px auto;
+    background-color:#FFFFFF;
+    position:relative;
+}
+#outline div{
+    cursor:default; /*#*/
+    background-color:#EEEEEE;
+}
+#outline .block1{
+    width:150.5px;
+    height:200px;
+    border:1.5px solid black;
+    
+    position:relative;
+    top:0.5px;
+    left:-0.5px;
+    
+}
+#outline .block2{
+    width:150px;
+    height:200px;
+    border:1.5px solid black;
+    
+    position:relative;
+    top:-202px;
+    left:348px;
+}
+#outline .block3{
+    width:198px;
+    height:50px;
+    border:1.5px solid black;
+    border-left:0px;
+    border-right:0px;
+    
+    position:relative;
+    top:-404.5px;
+    left:151.5px;
+}
+#outline .block4{
+    width:100px;
+    height:150px;
+    margin-top:45px;
+    margin-left:auto;
+    margin-right:auto;
+    border:1.5px solid black;
+    border-bottom:0px;
+    
+    position:relative;
+    top:-491px;
+    left:0px;
+}
+#outline .block5{
+    width:200px;
+    height:50px;
+    border:1.5px solid black;
+    border-right:0px;
+    
+    position:relative;
+    top:-492.5px;
+    left:-0.5px;
+}
+#outline .block6{
+    width:100px;
+    height:51px;
+    border-bottom:1.5px solid black;
+    
+    position:relative;
+    top:-545px;
+    left:200px;
+}
+#outline .block7{
+    width:199.5px;
+    height:50px;
+    border:1.5px solid black;
+    border-left:0px;
+    
+    position:relative;
+    top:-597.5px;
+    left:300px;
+}
+
+
+
+/*--------------------start and end position--------------------*/
+#outline #start{
+    font-size:25pt;
+    text-align:center;
+    font-family:Arial Unicode MS;
+    
+    width:40px;
+    height:40px;
+    background-color:#92d653;
+    margin:2px 0px;
+    border:1.5px solid black;
+    
+    position:relative;
+    top:-254px;
+    left:-0.5px;
+}
+#outline #end{
+    font-size:25pt;
+    text-align:center;
+    font-family:Arial Unicode MS;
+    
+    width:40px;
+    height:40px;
+    background-color:#8888ff;
+    margin:2px 0px;
+    border:1.5px solid black;
+    
+    position:relative;
+    top:-298.5px;
+    left:458px;
+}
+
+
+
+/*--------------------checking cheat&outside block--------------------*/
+#outline .border{
+    opacity:0;
+    position:relative;
+}
+#outline #check_cheat{
+    width:40px;
+    height:310px;
+    top:-905px;
+    left:500.5px;
+}
+#outline #t_border{
+    width:590px;
+    height:40px;
+    top:-1250px;
+    left:-45px;
+}
+#outline #b_border{
+    width:590px;
+    height:40px;
+    top:-947px;
+    left:-45px;
+}
+#outline #l_border{
+    width:40px;
+    height:310px;
+    top:-1290px;
+    left:-41px;
+}
+

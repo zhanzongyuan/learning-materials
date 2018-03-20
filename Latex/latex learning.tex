@@ -1,0 +1,136 @@
+\documentclass[UTF8]{ctexart}
+%为中英混排，自动检测系统，自动适应合适字体
+%确定编写文档类型为ctexart（ctex article），类似的还有ctexrep（ctex report）支持中文的report类
+%
+%ctexart类 包含如下五个控制序列定义行文组织结构
+%\section{·}
+%\subsection{·}
+%\subsubsection{·}
+%\paragraph{·}
+%\subparagraph{·}
+
+
+%旧兼容中英混排方法
+%\documentclass{article}
+%\usepackage{xeCJK}  %调用xeCJK宏包
+%\setCJKmainfont{STFangSong}  %设置CJK字体为仿宋 搜索字体册
+
+
+%=================================================================
+						%导言区
+%=================================================================
+
+%添加amsmath宏包，调用数学公式
+\usepackage{amsmath}
+%添加graphicx宏包，调用图片
+\usepackage{graphicx}
+%控制页边距
+\usepackage{geometry}
+%\geometry{papersize={20cm,60cm}}
+\geometry{left=4cm,right=4cm,top=2cm,bottom=4cm}
+%页眉页脚
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\author}
+\chead{\date}
+\rhead{152xxxxxxxx}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\footrulewidth}{0pt}
+
+
+%全局定义
+\title{中山大学数据科学与计算机学院本科生实验报告}
+\author{詹宗沅}
+\date{\today}
+
+
+
+%=================================================================
+						%正文显示区
+%=================================================================
+\begin{document}
+
+%控制序列，可以将定义在导言区的信息按照一定格式展示出来
+\maketitle
+%控制序列，显示文章目录
+\tableofcontents
+
+
+\section{section}
+this is content under section
+  \subsection{subsection}
+  this is content under subsection
+    \subsubsection{susubsection}
+    hei, i am subsubsection
+      \paragraph{paragraph}
+      paragraph is here, too
+        \subparagraph{subparagraph}
+        call me subparagrah
+
+
+\section{math}
+%数学公式  \usepackage{amsmath}
+%行内：$...$    \[...\]
+%行间：\begin{equation}  \end{equation}， equation在这里是个环境
+假设一个，$Y_{eat_{who}}$所以有
+\begin{equation}
+f(x) \Rightarrow g(x)
+\end{equation}
+%行内公式也可以使用 \(...\) 或者 \begin{math} ... \end{math} 来插入，但略显麻烦。
+%无编号的行间公式也可以使用 \begin{displaymath} ... \end{displaymath} 或者 \begin{equation*} ... \end{equation*} 来插入，但略显麻烦。（equation* 中的 * 表示环境不编号）
+%也有 plainTeX 风格的 $$ ... $$ 来插入不编号的行间公式。但是在 LaTeX 中这样做会改变行文的默认行间距，不推荐。请参考我的回答。
+  \subsection{界定符号}
+  \[ \Biggl\langle\biggl\langle\Bigl\langle\bigl\langle\langle x
+  \rangle\bigr\rangle\Bigr\rangle\biggr\rangle\Biggr\rangle \]
+
+  \[ \Biggl\lvert\biggl\lvert\Bigl\lvert\bigl\lvert\lvert x
+  \rvert\bigr\rvert\Bigr\rvert\biggr\rvert\Biggr\rvert \]
+
+  \[ \Biggl\lVert\biggl\lVert\Bigl\lVert\bigl\lVert\lVert x
+  \rVert\bigr\rVert\Bigr\rVert\biggr\rVert\Biggr\rVert \]
+  %各种括号用 (), [], \{\}, \langle\rangle 等命令表示；注意花括号通常用来输入命令和环境的参数，所以在数学公式中它们前面要加 \。因为 LaTeX 中 | 和 \| 的应用过于随意，amsmath 宏包推荐用 \lvert\rvert 和 \lVert\rVert 取而代之。
+  %为了调整这些分隔符的大小，amsmath宏包推荐使用 \big, \Big, \bigg, \Bigg 等一系列命令放在上述括号前面调整大小。
+
+
+\section{图片和表格}
+  \subsection{图片}
+  %需要引入宏包grapicx，加入可选参数控制使得占页面大小的20%，包括其他参数
+  \includegraphics[width = .2\textwidth]{Screenshot_1512636581.png}
+  \subsection{表格}
+  %表格，使用控制序列\begin{tabular} 环境，tabular这里是个环境，这里| l | c | r |控制每列的对齐方向
+  %\hline 表示横线，& 分隔列，| 表示竖线，\\ 表示一行结束
+  \begin{tabular}{| l | c | r |}   % 这里| l | c | r | 表示每行的样式， 包括||
+    \hline
+    dog & cat & fish \\
+    \hline
+    eat & die & swim \\
+    \hline
+    eat & die & swim \\
+    \hline
+  \end{tabular}
+
+
+\section{浮动体}
+%插图和表格通常需要占据大块空间，所以在文字处理软件中我们经常需要调整他们的位置。figure 和 table 环境可以自动完成这样的任务；这种自动调整位置的环境称作浮动体(float)。我们以 figure 为例。
+%htbp 控制插图的位置， here   top   bottom   float page（Screenshot_1512636581.png）
+\begin{figure}[htbp]
+\centering   %使得插图居中
+\includegraphics[width = .4\textwidth]{Screenshot_1512636581.png}   
+\caption{实验截图}  %插图标题（标注），latex会自动加上编号
+\label{fig:myphoto}  %label应该放在图片之后
+\end{figure}
+
+\end{document}
+
+
+
+
+
+
+
+
+
