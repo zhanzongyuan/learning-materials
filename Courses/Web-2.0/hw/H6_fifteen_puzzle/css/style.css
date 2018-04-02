@@ -1,0 +1,181 @@
+/*--------------------initial--------------------*/
+*{
+    border:0px;
+    margin:0px;
+    padding:0px;
+    
+    outline:none;
+    text-align:center;
+    font-family:cursive;
+    font-weight:bolder;
+}
+h1{ 
+    margin-top:10px;
+    font-size:35pt;
+}
+body{
+    background-image:url("../image/background.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}
+
+
+
+/*--------------------position--------------------*/
+#game{
+    position:absolute;
+    left:18%;
+    top:10%;
+    width:800px;
+    height:500px;
+}
+
+
+
+/*--------------------recorder--------------------*/
+#time_pace{
+    position:absolute;
+    top:30px;
+    left:30%;
+    
+    font-size:20pt;
+}
+#paces,#timer{
+    width:100px;
+    height:40px;
+    text-align:left;
+    background-color:rgba(0,0,0,0);
+}
+
+
+
+/*--------------------puzzle's outline--------------------*/
+#outline{
+    position:absolute;
+    
+    top:20%;
+    left:33%;
+    
+    width:279px;
+    height:279px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:8px;
+    box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.30), 
+                0px 8px 11px 1px rgba(0, 0, 0, 0.56), 
+                0px 3px 15px 2px rgba(0, 0, 0, 0.48);
+}
+/*button style*/
+#start_stop{
+    position:absolute;
+    top:80%;
+    left:45%;
+    
+    border-radius:100px;
+    
+    width:70px;
+    height:65px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    background-image:url("../image/bigeye1.png");
+    background-size:50px;
+    background-repeat:no-repeat;
+    background-position:center;
+    transition:all 0.1s ease;
+    
+    
+    box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.30), 
+                0px 8px 11px 1px rgba(0, 0, 0, 0.36), 
+                0px 3px 15px 2px rgba(0, 0, 0, 0.48);
+    
+    cursor:pointer;
+}
+#clickMe{
+    position:absolute;
+    top:95%;
+    left:45%;
+    
+}
+#start_stop:hover{
+    background-image:url("../image/smalleye1.png");
+}
+
+
+
+/*--------------------block of puzzle--------------------*/
+.block{
+    position:absolute;
+    transition:all 0.1s ease;
+    background-size:280px 280px;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0);
+    cursor:pointer;
+}
+.block:hover{
+    z-index:16; /*#*/
+    transform:scale(1.1);
+    border:0.5px solid red;
+}
+
+
+
+/*--------------------changing size button--------------------*/
+#level{
+    position:absolute;
+    top:16%;
+    right:15%;
+    
+    width:100px;
+    list-style-type:none;
+}
+#level button{
+    height:40px;
+    background-image:url("../image/wood.jpg");
+    color:white;
+    cursor:pointer;
+    box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.30), 
+                0px 8px 11px 1px rgba(0, 0, 0, 0.56), 
+                0px 3px 15px 2px rgba(0, 0, 0, 0.48);
+}
+#level button:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+#l0, #l1, #l2{
+    width:100px;
+}
+#add, #sub{
+    z-index:1;
+    width:50px;
+}
+
+
+
+
+/*--------------------changing picture button--------------------*/
+#picture{
+    position:absolute;
+    top:16%;
+    left:3%;
+    
+    list-style-type:none;
+    z-index:0;
+    width:200px;
+}
+#picture li{
+    
+    width:200px;
+    height:50px;
+    background-position:center;
+    background-size:200px;
+    cursor:pointer;
+    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.20), 
+                0px 8px 11px 1px rgba(0, 0, 0, 0.26), 
+                0px 3px 15px 2px rgba(0, 0, 0, 0.28);
+}
+#picture li:hover{
+    transform:scale(1.1);
+}

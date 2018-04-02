@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <script src="../javascript/whac-a-mole.js"></script>
+</head>
+<body>
+    <h2>Whac-a-mole</h2>
+    <p>Test your skill. How many boxes(moles) can you check(hit) in 30 seconds?</p>
+    <form name="cpanel">
+        <center>
+            <table cellspacing=3>
+                <tr>
+                    <td><button class="button" type="button" id="startstop">Start Game | Stop Game</button></td>
+                    <td><pre>    </pre></td>
+                    <td align=right>Time:</td>
+                    <td><input type="text" name="timeleft" size="4" onFocus="this.blur()"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="state" size="20" value="Push Start to Play" onFocus="this.blur()"></td>
+                    <td><pre>    </pre></td>
+                    <td align=right>Score:</td>
+                    <td><input type="text" name="score" size="4" onFocus="this.blur()"></td>
+                </tr>
+            </table>
+        </center>
+    </form>
+    <form name="dmz">
+        <center>
+            <table cellspacing=3>
+                <tr>
+                    <td colspan=10><hr size=1></td>
+                </tr>
+                <tr id="row1"></tr>
+                <tr id="row2"></tr>
+                <tr id="row3"></tr>
+                <tr id="row4"></tr>
+                <tr id="row5"></tr>
+                <tr id="row6"></tr>
+                <tr>
+                    <td colspan=10><hr size=1></td>
+                </tr>
+            </table>
+        </center>
+    </form>
+ 
+ 
+    <pre class="instruction">
+        <strong>Instructions:</strong><br>
+        1.  Click on the radio buttons as they are selected randomly by the computer.
+        2.  1 point per hit, minus 1 point per miss.
+    </pre>
+ 
+</body>
+</html>

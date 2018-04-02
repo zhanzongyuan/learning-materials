@@ -1,0 +1,32 @@
+extends signUp_layout
+
+block content
+    form(id="boxUp", method="post",action="/post/signUp")
+        ul
+            li 
+                h Create a new account
+            li
+                input(id='username',  placeholder="Username", class='_input', maxlength='16', name='username', value= username)
+            li
+                input(id='id',  placeholder="ID", class='_input', maxlength='8', name='id', value= id)
+            li
+                input(id='tel',  placeholder="Telephone number", class='_input', maxlength='11', name='tel', value= cel)
+            li
+                input(id='email',  placeholder="E-mail", class='_input', name='email', value= email)
+            li
+                input(id='password',  placeholder="Password", type='password', class='_input', name='password', value= password)
+            li
+                input(id='cpassword',  placeholder="Confirm password", type='password', class='_input', name=null)
+            li
+                input(id='_submit', class='button', type='submit', value='Sign Up')
+                input(id='_reset', class='button', type='reset', value='Reset')
+            
+            
+            
+        div(id='w_username', class='warning') #{username}
+        div(id='w_id', class='warning') #{id}
+        div(id='w_tel', class='warning') #{tel}
+        div(id='w_email', class='warning') #{email}
+        div(id='w_password', class='warning') #{password}
+        div(id='w_cpassword', class='warning')
+        

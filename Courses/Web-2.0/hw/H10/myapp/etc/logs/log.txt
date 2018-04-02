@@ -1,0 +1,35 @@
+2016-12-20T20:09:50.327+0800 I CONTROL  [initandlisten] MongoDB starting : pid=7380 port=27017 dbpath=./model/data/db 64-bit host=boy
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] db version v3.4.0
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] git version: f4240c60f005be757399042dc12f6addbc3170c1
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t-fips  3 May 2016
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] modules: none
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten] build environment:
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2016-12-20T20:09:50.328+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2016-12-20T20:09:50.329+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-12-20T20:09:50.329+0800 I CONTROL  [initandlisten] options: { config: "./etc/mongod.conf", net: { bindIp: "127.0.0.1", http: { JSONPEnabled: false, RESTInterfaceEnabled: false, enabled: false }, ipv6: false, maxIncomingConnections: 65536, port: 27017, wireObjectCheck: true }, operationProfiling: { mode: "off", slowOpThresholdMs: 100 }, security: { authorization: "disabled", javascriptEnabled: true }, storage: { dbPath: "./model/data/db", directoryPerDB: false, engine: "wiredTiger", indexBuildRetry: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: false, logRotate: "rename", path: "./etc/logs/log.txt", timeStampFormat: "iso8601-local" } }
+2016-12-20T20:09:50.330+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3545M,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2016-12-20T20:09:51.256+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory './model/data/db/diagnostic.data'
+2016-12-20T20:09:51.257+0800 I NETWORK  [thread1] waiting for connections on port 27017
+2016-12-20T20:09:51.290+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:59351 #1 (1 connection now open)
+2016-12-20T20:09:51.296+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:59351 conn1: { driver: { name: "nodejs", version: "2.2.12" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "6.3.9600" }, platform: "Node.js v6.9.1, LE, mongodb-core: 2.0.14" }
+2016-12-20T21:54:58.573+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62408 #2 (2 connections now open)
+2016-12-20T21:54:58.573+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:62408 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.0" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2016-12-20T21:56:09.073+0800 I -        [conn2] end connection 127.0.0.1:62408 (2 connections now open)
+2016-12-20T21:57:07.113+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62511 #3 (2 connections now open)
+2016-12-20T21:57:07.113+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:62511 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.0" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2016-12-20T21:57:31.237+0800 I -        [conn3] end connection 127.0.0.1:62511 (2 connections now open)
+2016-12-20T22:01:47.815+0800 I CONTROL  [thread2] Ctrl-C signal
+2016-12-20T22:01:47.815+0800 I CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2016-12-20T22:01:47.815+0800 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2016-12-20T22:01:47.815+0800 I NETWORK  [consoleTerminate] closing listening socket: 440
+2016-12-20T22:01:47.815+0800 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2016-12-20T22:01:47.815+0800 I FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2016-12-20T22:01:47.818+0800 I -        [conn1] end connection 127.0.0.1:59351 (1 connection now open)
+2016-12-20T22:01:47.820+0800 I STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2016-12-20T22:01:48.182+0800 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2016-12-20T22:01:48.182+0800 I CONTROL  [consoleTerminate] now exiting
+2016-12-20T22:01:48.182+0800 I CONTROL  [consoleTerminate] shutting down with code:12
+2016-12-20T22:01:48.182+0800 

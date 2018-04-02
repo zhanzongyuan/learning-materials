@@ -1,2 +1,0 @@
-- Course sites: runmanor.github.io
-- PDF password: SS.sysu.2018

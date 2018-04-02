@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Account Detail!
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(language="javascript", src="/javascripts/lib/jquery.js")
+    script #{warning}
+
+body
+    div#boxDet
+        div#detail
+            h Account Details
+            p Username: #{username}
+            p Id: #{id}
+            p Tel: #{tel}
+            p E-mail: #{email}
+            a(href='/logIn', id='_logOut', onClick="$.post('/logOut');") Log out
